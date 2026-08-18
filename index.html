@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1411">
+  <title>鐘響以前｜三日營隊</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="game">
+  <div id="photo" class="photo"></div><div class="shade"></div>
+
+  <section id="cover" class="page cover">
+    <div class="cover-copy"><h1>鐘響以前</h1><p>星築美少女自創線上解謎任務包</p><button data-go="prologue">查看營隊邀請</button></div>
+  </section>
+
+  <section id="chapters" class="page panel hidden">
+    <button class="back" data-go="prologue">‹ 返回</button><p class="eyebrow">章節選擇</p><h2>三日營隊紀錄</h2>
+    <div class="chapter-list">
+      <button id="dayOne"><b>第一天</b><span>開始</span></button>
+      <button id="dayTwo"><b>第二天</b><span>開始</span></button>
+      <button id="dayThree"><b>第三天</b><span>開始</span></button>
+    </div>
+  </section>
+
+  <section id="prologue" class="page story-prologue hidden">
+    <button class="back" data-go="cover">‹ 返回</button>
+    <div class="prologue-card"><p class="eyebrow">前情提要</p><h2>暑假才剛開始，<br>你和艾莉已經無聊了。</h2><p>你是一名大學生，艾莉是你的同班好友。放假後，你們不是窩在家裡，就是傳訊息抱怨日子太無聊。</p><p>這天下午，艾莉來你家聊天。桌上正放著一張社區營隊的招募單。</p><button id="viewFlyer">拿起桌上的招募單</button></div>
+  </section>
+
+  <section id="flyer" class="flyer-page hidden">
+    <button id="flyerBack" class="layer-back">‹ 返回客廳</button>
+    <article class="flyer-paper"><p class="flyer-tag">暑期社區服務招募</p><h2>合興國小<br>三日兒童營隊</h2><div class="flyer-rule"></div><h3>招募大專生隊輔</h3><p>陪伴國小生進行破冰遊戲、手作課、校園探索與成果活動。</p><dl><div><dt>活動日期</dt><dd>暑假期間，共三日</dd></div><div><dt>活動時間</dt><dd>08:00–15:00，不過夜</dd></div><div><dt>服務內容</dt><dd>小隊陪伴、活動協助、安全照顧</dd></div><div><dt>提供</dt><dd>午餐、服務證明與隊輔津貼</dd></div></dl><p class="flyer-call">想讓這個暑假不一樣嗎？<br>歡迎和朋友一起報名！</p><button id="acceptFlyer">看完傳單</button></article>
+  </section>
+
+  <header id="hud" class="hidden"><button id="sceneBack" aria-label="上一個場景">‹</button><button id="sceneForward" class="hidden" aria-label="下一個場景">›</button><div><small id="hudDay">DAY 1</small><strong id="place">合興國小</strong></div><button id="notesBtn">線索 <i id="count">0</i></button></header>
+  <section id="explore" class="hidden"><div id="spots"></div></section>
+  <button id="bagBtn" class="bag-button hidden">查看背包</button>
+  <button id="sceneNext" class="scene-next hidden">繼續</button>
+
+  <section id="bag" class="bag hidden">
+    <button id="bagBack" class="layer-back">‹ 返回校園</button>
+    <button id="bagPhone" class="bag-phone" aria-label="拿出手機"></button>
+    <button id="bagMap" class="bag-paper map-paper" aria-label="查看校園場地圖"></button>
+    <p>手機和學校提供的場地圖放在裡面。</p>
+  </section>
+
+  <section id="document" class="document hidden"><button id="docBack" class="layer-back">‹ 返回背包</button><p class="eyebrow" id="docType"></p><h2 id="docTitle"></h2><div id="docBody"></div></section>
+  <section id="clueDetail" class="document hidden"><button type="button" id="clueBack" class="layer-back clue-return">‹ 返回後棟</button><p class="eyebrow">環境觀察</p><h2 id="clueTitle"></h2><div id="clueText"></div><button type="button" id="clueReturnBottom" class="document-return clue-return">返回後棟</button></section>
+
+  <section id="dialogue" class="dialogue hidden"><b id="speaker"></b><p id="line"></p><div id="choices"></div><button id="prevLine" class="hidden">上一句</button><button id="next">繼續</button></section>
+
+  <section id="phone" class="phone-wrap hidden">
+    <div class="phone"><div class="phone-top">07:32　▮▮▮　63%</div><header><button id="phoneBack">‹</button><b id="phoneTitle">LINE</b></header><div id="messages"></div></div>
+  </section>
+
+  <section id="notebook" class="notebook hidden"><button id="closeNotes">×</button><p class="eyebrow">觀察筆記</p><h2 id="noteDay">第一天</h2><div id="noteList"></div></section>
+
+  <section id="ending" class="page ending hidden"><p class="eyebrow">第一天結束</p><h2>第一印象，<br>只對了一半。</h2><p>賴安確實說了謊，但他隱藏的不是闖入後棟的理由。理解原因，也不代表忽略安全問題。</p><p class="endquote">那串不屬於賴安的腳印，究竟是誰留下的？</p><button id="nextDayTwo">前往第二天</button><button id="replay" class="ending-secondary">回到三日營隊紀錄</button></section>
+  <section id="endingTwo" class="page ending hidden"><p class="eyebrow">第二天結束</p><h2>照片裡的<br>第五個人。</h2><p>腳印、種子和芮琪多畫出來的人，最後都指向阿龍。他不是來破壞後棟，只是不知道自己還能不能靠近以前的朋友。</p><p class="endquote">方案已經排好。明天，它真的做得到嗎？</p><button id="nextDayThree">前往第三天</button><button id="finishDayTwo" class="ending-secondary">回到三日營隊紀錄</button></section>
+
+  <section id="planner" class="planner hidden">
+    <button id="plannerBack" class="layer-back">‹ 返回三日紀錄</button>
+    <p class="eyebrow">第二天・16:20</p><h2>安排阿龍的最後一天</h2>
+    <div id="resourceBoard" class="resource-board"></div>
+    <div class="fixed-limits"><b>阿龍已經告訴你的條件</b><span>可參與 11:00–13:00（120 分鐘）</span><span>13:00 由媽媽接走</span><span>目前不在正式活動名單</span></div>
+    <div id="planSlots" class="plan-slots"></div>
+    <div id="plannerQuestion"></div><div id="plannerOptions"></div><div id="decisionFeedback" class="hidden"></div><p id="plannerProgress"></p>
+  </section>
+
+  <section id="result" class="result hidden"><div id="resultContent"></div></section>
+  <section id="thanks" class="thanks hidden">
+    <div class="thanks-stars" aria-hidden="true">✦　·　✧　·　✦</div>
+    <p class="eyebrow">謝謝你完成這趟營隊</p>
+    <h2>改變，不一定要從<br>很遠的地方開始。</h2>
+    <blockquote>「不要等待成為英雄才開始，尋找一個你能舒服跨出的第一步。」</blockquote>
+    <div class="our-words"><b>我們的話</b><p>永續行動不需要一開始就要求完美的解決方案或高昂的時間投入。試著深入了解你想要溝通的對象，善用自己的專業與身邊的資源，將龐大的社會議題拆解成輕量、好玩且具體的小任務。</p><p>只要能創造一個好的入口，讓更多人看見自身的可能性，每一個人都能成為改變中的一束光！</p></div>
+    <a class="instagram-link" href="https://www.instagram.com/buildthestars/" target="_blank" rel="noopener"><span>追蹤我們的下一步</span><b>星築美少女 @buildthestars ↗</b></a>
+    <button id="thanksHome">回到三日營隊紀錄</button>
+  </section>
+  <div id="cameraFlash" aria-hidden="true"></div>
+  <div id="toast" class="toast hidden"></div>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
