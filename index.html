@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0b1411">
   <title>鐘響以前｜三日營隊</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <main id="game">
@@ -13,6 +13,11 @@
 
   <section id="cover" class="page cover">
     <div class="cover-copy"><h1>鐘響以前</h1><p>星築美少女自創線上解謎任務包</p><button data-go="prologue">查看營隊邀請</button></div>
+  </section>
+
+  <section id="nameEntry" class="page name-entry hidden">
+    <button class="back" data-go="flyer">‹ 返回傳單</button>
+    <div class="name-card"><p class="eyebrow">在故事開始以前</p><h2>隊輔老師，<br>大家該怎麼稱呼你？</h2><p>這個稱呼會出現在接下來的對話中。</p><label for="playerName">你的名字或暱稱</label><input id="playerName" maxlength="12" autocomplete="nickname" placeholder="例如：小星、嘉恩"><button id="confirmName">用這個稱呼進入故事</button><small id="nameError" aria-live="polite"></small></div>
   </section>
 
   <section id="chapters" class="page panel hidden">
@@ -82,6 +87,6 @@
   <div id="cameraFlash" aria-hidden="true"></div>
   <div id="toast" class="toast hidden"></div>
 </main>
-<script src="game.js"></script>
+<script src="game.js?v=5"></script>
 </body>
 </html>
