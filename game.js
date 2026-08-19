@@ -181,11 +181,11 @@ function toast(t){const x=$('#toast');x.textContent=t;x.classList.remove('hidden
 function showFlyer(){hideAll();$('#flyer').classList.remove('hidden')}
 function confirmFlyer(){choose('要和艾莉一起報名三日營隊嗎？',[{label:'確認參加營隊',value:'yes'},{label:'再看一次招募傳單',value:'again'}],v=>{track('invitation_choice',{choice:v});if(v==='yes')page('nameEntry');else showFlyer()})}
 $('#viewFlyer').onclick=showFlyer;
-function savePlayerName(){const value=$('#playerName').value.trim();if(!value){$('#nameError').textContent='請先輸入大家可以稱呼你的名字。';return}state.playerName=value;localStorage.setItem('clockPlayerName',value);$('#nameError').textContent='';page(localStorage.getItem('clockPretestAcknowledged')==='yes'?'chapters':'preSurvey')}
+function savePlayerName(){const value=$('#playerName').value.trim();if(!value){$('#nameError').textContent='請先輸入大家可以稱呼你的名字。';return}state.playerName=value;localStorage.setItem('clockPlayerName',value);$('#nameError').textContent='';page('preSurvey')}
 $('#confirmName').onclick=savePlayerName;
 $('#playerName').addEventListener('keydown',e=>{if(e.key==='Enter')savePlayerName()});
 $('#preSurveyOpen').onclick=()=>track('pretest_external_opened');
-$('#preSurveyDone').onclick=()=>{localStorage.setItem('clockPretestAcknowledged','yes');state.gameStartedAt=Date.now();localStorage.setItem('clockGameStartedAt',String(state.gameStartedAt));track('pretest_completion_acknowledged');track('game_started');page('chapters')};
+$('#preSurveyDone').onclick=()=>{sessionStorage.setItem('clockPretestAcknowledged','yes');state.gameStartedAt=Date.now();localStorage.setItem('clockGameStartedAt',String(state.gameStartedAt));track('pretest_completion_acknowledged');track('game_started');page('chapters')};
 $('#postSurveyOpen').onclick=()=>track('posttest_external_opened');
 $('#postSurveyBack').onclick=()=>{hideAll();$('#result').classList.remove('hidden')};
 $('#postSurveyDone').onclick=()=>{localStorage.setItem('clockPosttestAcknowledged','yes');track('posttest_completion_acknowledged');showFinalThanks()};
