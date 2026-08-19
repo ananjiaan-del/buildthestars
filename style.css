@@ -47,7 +47,7 @@ header#hud{position:absolute;z-index:20;left:0;right:0;top:0;padding:calc(12px +
 .task{position:absolute;z-index:19;left:14px;right:14px;top:78px;padding:9px 12px;background:rgba(4,11,8,.82);border-left:3px solid var(--gold)}
 .task small{display:block;color:#aebbb4;font-size:10px}
 .task b{font-size:13px}
-.tap-help{position:absolute;z-index:12;left:50%;bottom:20px;transform:translateX(-50%);white-space:nowrap;background:rgba(3,9,7,.75);border:1px solid var(--line);border-radius:99px;padding:7px 11px;font-size:11px}
+.tap-help{position:absolute;z-index:12;left:50%;top:76px;bottom:auto;transform:translateX(-50%);width:max-content;max-width:calc(100% - 34px);white-space:normal;text-align:center;background:rgba(3,9,7,.75);border:1px solid var(--line);border-radius:8px;padding:7px 11px;font-size:11px;line-height:1.45;pointer-events:none}
 #explore,#spots{position:absolute;z-index:9;inset:0}
 .spot{position:absolute;border:0;background:transparent}
 .spot:active{background:rgba(229,185,102,.15)}
@@ -88,7 +88,7 @@ header#hud{position:absolute;z-index:20;left:0;right:0;top:0;padding:calc(12px +
 #game{border-radius:24px;border:1px solid #2a3731}
 }
 .bag-button{position:absolute;z-index:22;right:15px;bottom:18px;border:1px solid var(--line);border-radius:99px;background:rgba(3,9,7,.86);color:white;padding:10px 14px}
-.scene-next{position:absolute;z-index:23;left:50%;bottom:20px;transform:translateX(-50%);min-width:180px;border:0;border-radius:99px;background:var(--gold);color:#18221e;padding:11px 18px;font-weight:700;box-shadow:0 8px 25px rgba(0,0,0,.35)}
+.scene-next{position:absolute;z-index:23;left:auto;right:15px;bottom:18px;transform:none;max-width:175px;border:1px solid var(--line);border-radius:99px;background:rgba(3,9,7,.86);color:#fff;padding:10px 14px;font-size:12px;line-height:1.35;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.3)}
 .bag{position:absolute;z-index:45;inset:0;background:url("open-backpack-map.png") center/cover no-repeat}
 .layer-back{position:absolute;z-index:3;left:14px;top:calc(14px + env(safe-area-inset-top));border:1px solid var(--line);background:rgba(3,9,7,.82);color:white;padding:9px 13px}
 .bag-phone{position:absolute;z-index:3;left:48%;top:46%;width:27%;height:27%;border:0;background:transparent}
