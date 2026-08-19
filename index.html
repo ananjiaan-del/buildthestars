@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0b1411">
   <title>鐘響以前｜三日營隊</title>
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css?v=11">
   <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing reset".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_tjGdnedEr57YcUMSL3d9eosQRcQ99KgPeUoAZLtuXAgM',{api_host:'https://us.i.posthog.com',defaults:'2026-05-30',person_profiles:'identified_only',autocapture:false,disable_session_recording:true,opt_out_capturing_by_default:true,capture_pageview:true,capture_pageleave:true});
@@ -22,6 +22,13 @@
   <section id="nameEntry" class="page name-entry hidden">
     <button class="back" data-go="flyer">‹ 返回傳單</button>
     <div class="name-card"><p class="eyebrow">在故事開始以前</p><h2>隊輔老師，<br>大家該怎麼稱呼你？</h2><p>這個稱呼會出現在接下來的對話中。</p><label for="playerName">你的名字或暱稱</label><input id="playerName" maxlength="12" autocomplete="nickname" placeholder="例如：小星、嘉恩"><button id="confirmName">用這個稱呼進入故事</button><small id="nameError" aria-live="polite"></small></div>
+  </section>
+
+  <section id="preSurvey" class="survey-page hidden">
+    <button class="survey-back" data-go="nameEntry">‹ 返回</button>
+    <div class="survey-heading"><p class="eyebrow">開始遊戲前</p><h2>先完成 60 秒前測</h2><p>完成前測、遊戲體驗與後測，即可獲得 <b>NT$3,000 大獎</b>抽獎資格！</p></div>
+    <iframe class="survey-frame" src="https://docs.google.com/forms/d/e/1FAIpQLScUzDmJU2Tk1y83Rgbu6b_58Uoh_utqDe1Nbk_IWAm7clew2g/viewform?embedded=true" title="《鐘響以前》遊戲前測" loading="lazy">載入前測問卷</iframe>
+    <div class="survey-actions"><a id="preSurveyOpen" href="https://forms.gle/d3yh5TtPovRkziDb7" target="_blank" rel="noopener">問卷顯示不完整？在新分頁填寫 ↗</a><button id="preSurveyDone">我已送出前測，開始遊戲</button><small>請先在上方送出問卷，再按下此按鈕。</small></div>
   </section>
 
   <section id="chapters" class="page panel hidden">
@@ -79,6 +86,12 @@
   </section>
 
   <section id="result" class="result hidden"><div id="resultContent"></div></section>
+  <section id="postSurvey" class="survey-page hidden">
+    <button class="survey-back" id="postSurveyBack">‹ 返回分析結果</button>
+    <div class="survey-heading"><p class="eyebrow">完成故事後</p><h2>最後完成後測</h2><p>再花約 2 分鐘完成後測，即可完成抽獎登記，獲得 <b>NT$3,000 大獎</b>抽獎資格！</p></div>
+    <iframe class="survey-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdigabcxFhdfb1lGxBial9CeqLkX4jDmgamfeG7njofM5uGUA/viewform?embedded=true" title="《鐘響以前》遊戲後測" loading="lazy">載入後測問卷</iframe>
+    <div class="survey-actions"><a id="postSurveyOpen" href="https://forms.gle/6Fm4YXsgkF36dqQ29" target="_blank" rel="noopener">問卷顯示不完整？在新分頁填寫 ↗</a><button id="postSurveyDone">我已送出後測，查看感謝頁</button><small>請先在上方送出問卷，再按下此按鈕。</small></div>
+  </section>
   <section id="thanks" class="thanks hidden">
     <div class="thanks-stars" aria-hidden="true">✦　·　✧　·　✦</div>
     <p class="eyebrow">謝謝你完成這趟營隊</p>
@@ -92,6 +105,6 @@
   <div id="toast" class="toast hidden"></div>
   <aside id="analyticsConsent" class="analytics-consent hidden" aria-live="polite"><b>協助我們改善遊戲</b><p>是否同意匿名記錄關卡進度與選項？不會傳送你輸入的名字，也不會錄製畫面。</p><div><button id="analyticsAccept">同意匿名統計</button><button id="analyticsDecline">暫時不要</button></div></aside>
 </main>
-<script src="game.js?v=10"></script>
+<script src="game.js?v=11"></script>
 </body>
 </html>
