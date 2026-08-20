@@ -72,6 +72,7 @@ header#hud{position:absolute;z-index:20;left:0;right:0;top:0;padding:calc(12px +
 .bubble{max-width:79%;border-radius:12px;background:white;padding:9px 11px;font-size:13px;line-height:1.55;box-shadow:0 1px 4px #cfd4d0}
 .me .bubble{background:#afe895}
 .send-report{width:100%;margin-top:12px;border:0;border-radius:7px;background:#2fb75b;color:white;padding:11px;font-weight:700}
+.phone-guide{margin:0 0 12px;padding:9px 10px;border-radius:9px;background:#fff6ce;color:#554519;text-align:center;font-size:11px;font-weight:700;line-height:1.45}
 .notebook{position:absolute;z-index:70;inset:0;padding:45px 25px;background:#e8dfca;color:#25332d;overflow:auto}
 .notebook>button{position:absolute;right:14px;top:9px;border:0;background:none;font-size:30px}
 .notebook h2{font:700 34px "Noto Serif TC"}
@@ -89,6 +90,7 @@ header#hud{position:absolute;z-index:20;left:0;right:0;top:0;padding:calc(12px +
 }
 .bag-button{position:absolute;z-index:22;right:15px;bottom:18px;border:1px solid var(--line);border-radius:99px;background:rgba(3,9,7,.86);color:white;padding:10px 14px}
 .scene-next{position:absolute;z-index:23;left:auto;right:15px;bottom:18px;transform:none;max-width:175px;border:1px solid var(--line);border-radius:99px;background:rgba(3,9,7,.86);color:#fff;padding:10px 14px;font-size:12px;line-height:1.35;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.scene-next.primary-center{left:50%;right:auto;bottom:24px;transform:translateX(-50%);width:calc(100% - 44px);max-width:360px;padding:15px 18px;border-color:#f0c66f;background:#e7b95e;color:#18231e;font-size:14px;box-shadow:0 12px 30px rgba(0,0,0,.42)}
 .bag{position:absolute;z-index:45;inset:0;background:url("assets/open-backpack-map.png") center/cover no-repeat}
 .layer-back{position:absolute;z-index:3;left:14px;top:calc(14px + env(safe-area-inset-top));border:1px solid var(--line);background:rgba(3,9,7,.82);color:white;padding:9px 13px}
 .bag-phone{position:absolute;z-index:3;left:48%;top:46%;width:27%;height:27%;border:0;background:transparent}
@@ -130,6 +132,7 @@ header#hud{position:absolute;z-index:20;left:0;right:0;top:0;padding:calc(12px +
  linear-gradient(165deg,#183b32,#081713 62%,#121728)}
 .planner:before{content:"✦";position:absolute;right:18px;top:74px;color:#ffc857;font-size:30px;transform:rotate(12deg);opacity:.8}
 .planner>h2{max-width:330px;font-size:31px}.planner>.eyebrow{display:inline-block;padding:5px 9px;border-radius:99px;background:#ffc857;color:#243127;font-weight:700}
+.planner-intro{margin:0 0 14px;padding:13px 14px;border-radius:14px;background:rgba(255,200,87,.12);border:1px solid rgba(255,200,87,.35)}.planner-intro b{display:block;color:#ffd87d;font-size:13px}.planner-intro p{margin:7px 0 0;color:#e5ece8;font-size:11px;line-height:1.65}
 .resource-board{border:0;border-radius:15px;padding:9px;box-shadow:0 12px 35px rgba(0,0,0,.28)}
 .resource-meter{position:relative;overflow:hidden;border-radius:11px;background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.04));padding:9px 5px 10px}
 .resource-meter .meter-icon{display:grid;place-items:center;width:24px;height:24px;margin:0 auto 4px;border-radius:8px;background:rgba(255,255,255,.13);font-size:12px}
